@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" id="top" class=" js no-touch localstorage">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Akamai Reproduction</title>
+        <meta name="description" content="This is a reproduction of an akamai test case testing difference in page load speeds between http/1.1 and http/2 on firefox.">
+        <meta name="keywords" content="foobar1, foobar, foobar1234">
+        <meta name="robots" content="INDEX,FOLLOW">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="canonical" href="https://h{{ http_version }}.do.todesschaf.net/">
+
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <script>
+            function imgMark() {
+                performance.clearMarks("img_load");
+                performance.mark("img_load");
+            }
+            imgMark();
+            // window.performance.measure('measure_load_from_resp', 'domContentLoadedEventEnd', 'img_load');
+        </script>
+        {% block page_head %}
+        {% endblock %}
+    </head>
+    <body class=" body-class-part1 body-class-part1 body-class-part2">
+        {% block page_body %}
+        {% endblock %}
+    </body>
+</html>
