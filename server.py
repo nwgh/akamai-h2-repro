@@ -6,8 +6,6 @@
 # <type> css <filename> cssfiles
 # number = 1-1000
 
-import os
-
 from flask import Flask, make_response, render_template, request
 
 app = Flask('akamai_h2')
@@ -25,7 +23,7 @@ def csstest():
     return make_css_js(css=True)
 
 def get_http_version():
-    if os.getenv('HTTP2'):
+    if 'HTTP2' in request.environ:
         return 2
     return 1
 
