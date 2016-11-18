@@ -13,7 +13,7 @@ from flask import Flask, make_response, render_template, request
 if 'SHLVL' in os.environ:
     app = Flask('akamai_h2')
 else:
-    app = Flask('akamai_h2', template_folder='/var/www/wsgi/akamai-h2-demo/templates')
+    app = Flask('akamai_h2', template_folder='/var/www/wsgi/akamai-h2-repro/templates')
 
 @app.route('/')
 def index():
