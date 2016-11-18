@@ -6,9 +6,14 @@
 # <type> css <filename> cssfiles
 # number = 1-1000
 
+import os
+
 from flask import Flask, make_response, render_template, request
 
-app = Flask('akamai_h2')
+if 'SHLVL' in os.environ:
+    app = Flask('akamai_h2')
+else:
+    app = Flask('akamai_h2', template_folder='/var/www/wsgi/akamai-h2-demo/templates')
 
 @app.route('/')
 def index():
