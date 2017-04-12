@@ -5,7 +5,7 @@
 <style>div {width:20px;height:20px;background-color:#000000;float:left;margin:1px;} </style>
 {% elif css %}
 {% for number in range(1, n + 1) %}
-<link rel="stylesheet" href="//h{{ http_version }}.do.todesschaf.net/css_{{ 1000 // n }}_{{ number }}.css">
+<link rel="stylesheet" href="//h{{ http_version }}.do.todesschaf.net/akamai/css_{{ 1000 // n }}_{{ number }}.css">
 {% endfor %}
 {% endif %}
 {% endblock %}
@@ -16,7 +16,7 @@
 {% endfor %}
 {% if js %}
 {% for number in range(1, n + 1) %}
-<script src="//h{{ http_version }}.do.todesschaf.net/js_{{ 1000 // n }}_{{ number }}.js"></script>
+<script src="//h{{ http_version }}.do.todesschaf.net/akamai/js_{{ 1000 // n }}_{{ number }}.js"></script>
 {% endfor %}
 {% endif %}
 {% endblock %}

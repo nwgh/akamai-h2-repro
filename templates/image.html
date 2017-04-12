@@ -5,6 +5,6 @@
 <script>performance.mark("img_start");</script>
 
 {% for number in range(1, n + 1) %}
-<img onload="imgMark();" src="//h{{ http_version }}.do.todesschaf.net/image_{{ 1000 // n }}.jpg?n={{ number }}" width="75" height="75" alt="">
+<img onload="imgMark();" src="//h{{ http_version }}.do.todesschaf.net/akamai/image_{{ 1000 // n }}.jpg?n={{ number }}" width="75" height="75" alt="">
 {% endfor %}
 {% endblock %}
